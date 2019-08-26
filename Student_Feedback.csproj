@@ -67,9 +67,70 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\paper-dashboard.min790f.css" />
+    <Content Include="assets\demo\demo.css" />
+    <Content Include="assets\demo\demo.js" />
+    <Content Include="assets\demo\jquery.sharrre.js" />
+    <Content Include="assets\img\agenda.png" />
+    <Content Include="assets\img\apple-icon.png" />
+    <Content Include="assets\img\bg\bruno-abatti.jpg" />
+    <Content Include="assets\img\bg\damir-bosnjak.jpg" />
+    <Content Include="assets\img\bg\daniel-olahs.jpg" />
+    <Content Include="assets\img\bg\david-marcu.jpg" />
+    <Content Include="assets\img\bg\fabio-mangione.jpg" />
+    <Content Include="assets\img\bg\jan-sendereks.jpg" />
+    <Content Include="assets\img\default-avatar.png" />
+    <Content Include="assets\img\evernote.png" />
+    <Content Include="assets\img\faces\ayo-ogunseinde-2.jpg" />
+    <Content Include="assets\img\faces\clem-onojeghuo-2.jpg" />
+    <Content Include="assets\img\faces\erik-lucatero-2.jpg" />
+    <Content Include="assets\img\faces\joe-gardner-2.jpg" />
+    <Content Include="assets\img\faces\kaci-baum-2.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\flags\AU.png" />
+    <Content Include="assets\img\flags\BR.png" />
+    <Content Include="assets\img\flags\DE.png" />
+    <Content Include="assets\img\flags\GB.png" />
+    <Content Include="assets\img\flags\RO.png" />
+    <Content Include="assets\img\flags\US.png" />
+    <Content Include="assets\img\image_placeholder.jpg" />
+    <Content Include="assets\img\logo-small.png" />
+    <Content Include="assets\img\mike.jpg" />
+    <Content Include="assets\img\placeholder.jpg" />
+    <Content Include="assets\img\stylus.jpg" />
+    <Content Include="assets\js\core\bootstrap.min.js" />
+    <Content Include="assets\js\core\jquery.min.js" />
+    <Content Include="assets\js\core\popper.min.js" />
+    <Content Include="assets\js\paper-dashboard.min790f.js" />
+    <Content Include="assets\js\plugins\bootstrap-datetimepicker.js" />
+    <Content Include="assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="assets\js\plugins\bootstrap-selectpicker.js" />
+    <Content Include="assets\js\plugins\bootstrap-switch.js" />
+    <Content Include="assets\js\plugins\bootstrap-tagsinput.js" />
+    <Content Include="assets\js\plugins\chartjs.min.js" />
+    <Content Include="assets\js\plugins\fullcalendar.min.js" />
+    <Content Include="assets\js\plugins\jasny-bootstrap.min.js" />
+    <Content Include="assets\js\plugins\jquery-jvectormap.js" />
+    <Content Include="assets\js\plugins\jquery.bootstrap-wizard.js" />
+    <Content Include="assets\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="assets\js\plugins\jquery.validate.min.js" />
+    <Content Include="assets\js\plugins\moment.min.js" />
+    <Content Include="assets\js\plugins\nouislider.min.js" />
+    <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="assets\js\plugins\sweetalert2.min.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
