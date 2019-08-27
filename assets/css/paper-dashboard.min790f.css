@@ -8360,6 +8360,7 @@ a[data-toggle=collapse][aria-expanded=true] .caret {
     }
 
 .navbar .navbar-nav .nav-link {
+    text-transform: uppercase;
     font-size: .7142em;
     padding: .5rem .7rem;
     line-height: 1.625rem;
@@ -8441,16 +8442,17 @@ a[data-toggle=collapse][aria-expanded=true] .caret {
 
 .navbar.navbar-transparent {
     background-color: transparent !important;
-    box-shadow: none
+    box-shadow: none;
+    border-bottom: 1px solid #ddd
 }
 
     .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
-        
+        color: #fff
     }
 
         .navbar.navbar-transparent a:not(.dropdown-item):not(.btn).disabled {
             opacity: .5;
-            color: #66615b
+            color: #fff
         }
 
     .navbar.navbar-transparent .button-bar {
@@ -8458,7 +8460,7 @@ a[data-toggle=collapse][aria-expanded=true] .caret {
     }
 
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn) {
-        color:#fff
+        color: #fff
     }
 
         .navbar.navbar-transparent .nav-item.active .nav-link:not(.btn),
@@ -12809,7 +12811,7 @@ img {
 .login-page .navbar.navbar-transparent,
 .register-page .navbar.navbar-transparent {
     border-bottom: 1px solid transparent;
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .lock-page .navbar .navbar-brand,
@@ -13577,7 +13579,7 @@ img {
         width: 22px;
         height: 1px;
         border-radius: 1px;
-        background: #66615b
+        background: #fff
     }
 
         .navbar .navbar-toggler-bar + .navbar-toggler-bar {

@@ -26,17 +26,19 @@
 </head>
 <body>
         <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="margin-top: 25px;">
+  <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="border-bottom:none;">
     <div class="container">
       <div class="navbar-wrapper">
-        <div class="navbar-toggle">
+        <%--<div class="navbar-toggle">
           <button type="button" class="navbar-toggler">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
+            <span class="navbar-toggler-bar bar1" style="background-color:#fff"></span>
+            <span class="navbar-toggler-bar bar2" style=" background-color:#fff"></span>
+            <span class="navbar-toggler-bar bar3" style=" background-color:#fff"></span>
           </button>
+        </div>--%>
+        <div class="p-3">
+            <a class="navbar-brand" href="Login.aspx" style="font-size:2em">Student Feedback</a>
         </div>
-        <a class="navbar-brand" href="Login.aspx" style="font-size:2em">Student Feedback</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -47,12 +49,12 @@
         <ul class="navbar-nav">
           
           <li class="nav-item ">
-            <a href="register.html" class="nav-link" style="font-size:1.5em">
+            <a href="Register.aspx" class="nav-link" style="font-size:1.5em">
               <i class="nc-icon nc-book-bookmark" style="font-size:1.2em"></i> Register
             </a>
           </li>
           <li class="nav-item  active ">
-            <a href="login.html" class="nav-link" style="font-size:1.5em">
+            <a href="Login.aspx" class="nav-link" style="font-size:1.5em">
               <i class="nc-icon nc-tap-01" style="font-size:1.2em"></i> Login
             </a>
           </li>
@@ -82,7 +84,7 @@
                         <i class="nc-icon nc-single-02"></i>
                       </span>
                     </div>
-                      <asp:TextBox ID="Name_TextBox" class="form-control" placeholder="Name..." runat="server"></asp:TextBox>
+                      <asp:TextBox ID="Name_TextBox" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{1,}" required="true" placeholder="Name..." runat="server"></asp:TextBox>
                   </div>
                   <div class="input-group">
                     <div class="input-group-prepend">
@@ -90,12 +92,15 @@
                         <i class="nc-icon nc-key-25"></i>
                       </span>
                     </div>
-                    <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
                   </div>
                   <br/>
                 </div>
                 <div class="card-footer ">
-                  <a href="#pablo" class="btn btn-warning btn-round btn-block mb-3">Get Started</a>
+                    <div class="col text-center">
+                  <%--<a href="#pablo" class="btn btn-primary btn-round mb-3 pl-5 pr-5">Login</a>--%>
+                        <asp:Button ID="Login_Button" class="btn btn-primary btn-round mb-3 pl-5 pr-5" runat="server" Text="Login" />
+                        </div>
                 </div>
               </div>
             </form>
@@ -108,14 +113,14 @@
             <nav class="footer-nav">
               <ul>
                 <li>
-                  <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
+                  <a href="http://pushkar-asapure.ml/" target="_blank">Pushkar A.</a>
                 </li>
-                <li>
-                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                </li>
-                <li>
+                  <li>
+                <a href="https://github.com/typhoon99/Student_Feedback/" target="_blank">Github</a>
+                  </li>
+                <%--<li>
                   <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                </li>
+                </li>--%>
               </ul>
             </nav>
             <div class="credits ml-auto">
@@ -123,7 +128,7 @@
                 ©
                 <script>
                     document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                </script>, made with <i class="fa fa-heart heart"></i> by Pushkar Asapure
               </span>
             </div>
           </div>

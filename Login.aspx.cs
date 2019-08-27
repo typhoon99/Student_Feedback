@@ -11,7 +11,7 @@ namespace Student_Feedback
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.Name_TextBox.Text = string.Empty;
         }
     }
 }
