@@ -24,7 +24,7 @@
     <link href="assets/demo/demo.css" rel="stylesheet" />
 
 </head>
-<body>
+<body class="register-page">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="border-bottom: none">
     <div class="container">
@@ -65,13 +65,13 @@
   </nav>
   <!-- End Navbar -->
     <div class="wrapper wrapper-full-page ">
-        <div class="full-page section-image" filter-color="black" data-image="../../assets/img/bg/jan-sendereks.jpg">
+        <div class="full-page register-page section-image" filter-color="black" data-image="../../assets/img/bg/jan-sendereks.jpg">
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
-            <div class="content">
+            <div class="content" style="padding-top:11vh">
                 <div class="container">
-                    <div class="col-lg-8 col-md-6 ml-auto mr-auto">
+                    <div class="col-lg-8 col-md-6 ml-auto mr-auto justify-content-center">
                         <form class="form1" runat="server">
-                            <div class="card card-login">
+                            <div class="card card-login ">
                                 <div class="card-header ">
                                     <div class="card-header ">
                                         <h3 class="header text-center">Register</h3>
