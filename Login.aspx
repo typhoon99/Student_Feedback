@@ -91,7 +91,7 @@
                       <span class="input-group-text">
                         <i class="nc-icon nc-key-25"></i>
                       </span>
-                    </div>
+     0               </div>
                     <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
                   </div>
                   <br/>

@@ -193,7 +193,7 @@
                                 <div class="card-footer ">
                                     <div class="col text-center">
                                         <%--<a href="#pablo" class="btn btn-primary btn-round mb-3 pl-5 pr-5">Register</a>--%>
-                                        <asp:Button ID="Register_Button" class="btn btn-primary btn-round mb-3 pl-5 pr-5" runat="server" Text="Register" />
+                                        <asp:Button ID="Register_Button" class="btn btn-primary btn-round mb-3 pl-5 pr-5" runat="server" Text="Register" OnClick="Register_Button_Click" />
                                     </div>
                                 </div>
                             </div>
