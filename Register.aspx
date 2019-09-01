@@ -188,13 +188,20 @@
                                     </div>
                                         </div>
                                         </div>
-                                    
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <span id="strength"></span>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <span id="message"></span>
+                                        </div>
+                                    </div>
                                     <br />
                                 </div>
                                 <div class="card-footer ">
                                     <div class="col text-center">
                                         <%--<a href="#pablo" class="btn btn-primary btn-round mb-3 pl-5 pr-5">Register</a>--%>
-                                        <asp:Button ID="Register_Button" class="btn btn-primary btn-round mb-3 pl-5 pr-5" runat="server" Text="Register" OnClick="Register_Button_Click" />
+                                        <asp:Button ID="Register_Button" class="btn btn-primary btn-round disabled mb-3 pl-5 pr-5" runat="server" Text="Register" OnClick="Register_Button_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -563,6 +570,25 @@
     </script>
 
 
-    
+    <script>
+        $('#ConfirmPassword_TextBox').on('keyup', function () {
+            if ($('#Password_TextBox').val() != $('#ConfirmPassword_TextBox').val()) {
+                $('#message').html('Passwords do not match.').css('color', 'red');
+                $("#Register_Button").addClass("disabled");
+            }
+            else {
+                $('#message').html('');
+                $("#Register_Button").removeClass("disabled");
+            }
+                
+        });
+
+        $('#Register_Button').on('click', function () {
+            if ($('#Password_TextBox').val() != $('#ConfirmPassword_TextBox').val()) {
+                alert("Password and Confirm Password do not match.");
+            }
+        });
+    </script>
+
 </body>
 </html>
