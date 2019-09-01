@@ -9,7 +9,7 @@ namespace Student_Feedback
 {
     public class Hash : Register
     {
-        public static string HashText(string text, string salt, SHA256 hasher)
+        public string HashText(string text, string salt, SHA256 hasher)
         {
             byte[] textWithSaltBytes = Encoding.UTF8.GetBytes(string.Concat(text, salt));
             byte[] hashedBytes = hasher.ComputeHash(textWithSaltBytes);
