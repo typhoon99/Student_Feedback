@@ -173,7 +173,7 @@
                                                 <i class="nc-icon nc-lock-circle-open"></i>
                                             </span>
                                         </div>
-                                        <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" runat="server" TextMode="Password"></asp:TextBox>
                                     </div>
                                         </div>
 
@@ -184,7 +184,7 @@
                                                 <i class="nc-icon nc-key-25"></i>
                                             </span>
                                         </div>
-                                        <asp:TextBox ID="ConfirmPassword_TextBox" class="form-control" placeholder="Re-enter Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox ID="ConfirmPassword_TextBox" class="form-control" placeholder="Re-enter Password" required="true" runat="server" TextMode="Password"></asp:TextBox>
                                     </div>
                                         </div>
                                         </div>
@@ -569,7 +569,7 @@
         });
     </script>
 
-
+    <!--Script to match Passwords-->
     <script>
         $('#ConfirmPassword_TextBox').on('keyup', function () {
             if ($('#Password_TextBox').val() != $('#ConfirmPassword_TextBox').val()) {
@@ -589,6 +589,29 @@
             }
         });
     </script>
-
+    
+    <!--Script for Password Strength-->
+    <script>
+        $('#Password_TextBox').on('keyup', function () {
+            // Do not show anything when the length of password is zero.
+            //if ($('Password_TextBox').val.length == 0) {
+            //    $('strength').html('');
+            //}
+            
+            // Check the conditions
+            var password = $('#Password_TextBox').val();
+            var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})")
+            var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+            if (strongRegex.test(password)) {
+                $('#strength').html('Password Strength : Strong').css('color', 'green');
+            }
+            else if (mediumRegex.test(password)) {
+                $('#strength').html('Password Strength : Medium').css('color', 'orange');
+            }
+            else {
+                $('#strength').html('Password Strength : Weak').css('color', 'red'); console.log('weak');
+            }
+        })
+    </script>
 </body>
 </html>
