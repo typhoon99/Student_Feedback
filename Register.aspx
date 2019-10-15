@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="card-body ">
                                     <div class="row">
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <asp:DropDownList ID="Department_DropDownList" runat="server" CssClass="form-control">
                                                     <asp:ListItem>Civil Engineering</asp:ListItem>
@@ -90,7 +90,7 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <asp:DropDownList ID="Year_DropDownList" runat="server" CssClass="form-control">
                                                     <asp:ListItem>First Year</asp:ListItem>
@@ -100,12 +100,24 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-2">
                                             <div class="form-group">
                                                 <asp:DropDownList ID="Division_DropDownList" runat="server" CssClass="form-control">
                                                     <asp:ListItem>A</asp:ListItem>
                                                     <asp:ListItem>B</asp:ListItem>
                                                 </asp:DropDownList>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-single-02"></i>
+                                            </span>
+                                        </div>
+                                        <asp:TextBox ID="Roll_TextBox" class="form-control" pattern="[0-9]{1,3}" required="true" placeholder="Roll No." runat="server" TextMode="SingleLine"></asp:TextBox>
+                                    </div>    
                                             </div>
                                         </div>
                                     </div>

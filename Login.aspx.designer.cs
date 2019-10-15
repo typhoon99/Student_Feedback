@@ -13,13 +13,13 @@ namespace Student_Feedback {
     public partial class Login {
         
         /// <summary>
-        /// Name_TextBox control.
+        /// Email_TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name_TextBox;
+        protected global::System.Web.UI.WebControls.TextBox Email_TextBox;
         
         /// <summary>
         /// Password_TextBox control.

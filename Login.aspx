@@ -84,15 +84,15 @@
                         <i class="nc-icon nc-single-02"></i>
                       </span>
                     </div>
-                      <asp:TextBox ID="Name_TextBox" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{1,}" required="true" placeholder="Name..." runat="server"></asp:TextBox>
+                      <asp:TextBox ID="Email_TextBox" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{1,}" required="true" placeholder="Email" runat="server"></asp:TextBox>
                   </div>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
                         <i class="nc-icon nc-key-25"></i>
                       </span>
-     0               </div>
-                    <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
+                  </div>
+                      <asp:TextBox ID="Password_TextBox" class="form-control" placeholder="Password" required="true" pattern="^[a-zA-Z]\w{3,10}" runat="server" TextMode="Password"></asp:TextBox>
                   </div>
                   <br/>
                 </div>
@@ -461,6 +461,7 @@
 
       });
   </script>
+  <script>
   <script>
       $(document).ready(function () {
           demo.checkFullPageBackgroundImage();

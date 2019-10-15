@@ -40,6 +40,15 @@ namespace Student_Feedback {
         protected global::System.Web.UI.WebControls.DropDownList Division_DropDownList;
         
         /// <summary>
+        /// Roll_TextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Roll_TextBox;
+        
+        /// <summary>
         /// Gender_DropDownList control.
         /// </summary>
         /// <remarks>

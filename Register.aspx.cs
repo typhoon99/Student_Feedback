@@ -21,41 +21,47 @@ namespace Student_Feedback
 
         protected void Register_Button_Click(object sender, EventArgs e)
         {
-            string branch, year, gender, division, firstName, lastName, name, email, mobile;
+            string branch, year, gender, division, firstName, lastName, name="", email, mobile, roll;
             string password, hashedPassword;
 
             branch = Department_DropDownList.Text.ToString().Trim();
             year = Year_DropDownList.Text.ToString().Trim();
             division = Division_DropDownList.Text.ToString().Trim();
+            roll = Roll_TextBox.Text.ToString().Trim();
             if (Gender_DropDownList.Text.ToString() == "Mr.")
+            {
                 gender = "Male";
+                name = "Mr.";
+            }
             else if (Gender_DropDownList.Text.ToString() == "Miss." || Gender_DropDownList.Text.ToString() == "Mrs.")
-                gender = "Female";
+            {
+                gender = "Male";
+                name = Gender_DropDownList.Text.ToString();
+            }
             else
                 gender = "Others";
             firstName = FirstName_TextBox.Text.ToString().Trim();
             firstName = char.ToUpper(firstName[0]) + firstName.Substring(1).ToLower();
             lastName = LastName_TextBox.Text.ToString().Trim();
             lastName = char.ToUpper(lastName[0]) + lastName.Substring(1).ToLower();
-            name = firstName + " " + lastName;
+            name = name + " " + firstName + " " + lastName;
             email = Email_TextBox.Text.ToString().ToLower();
             mobile = Mobile_TextBox.Text.ToString().Trim();
             password = Password_TextBox.Text.ToString();
             Hash hashObject = new Hash();
-            hashedPassword = hashObject.HashText(password, name, new SHA256CryptoServiceProvider());
+            hashedPassword = hashObject.HashText(password, "", new SHA256CryptoServiceProvider());
             string status;
             RegisterMethods rm = new RegisterMethods();
-            status = rm.InsertData(branch, year, division, gender, name, email, mobile, hashedPassword);
-            if (status == "Success")
+            if (rm.CheckUser(branch,year,division,roll)!=0)
             {
-
-                ScriptManager.RegisterStartupScript(this, GetType(), "AlertRegister", "alert('" + status + "');", true);
-                //Response.Redirect("login/Feedback.aspx");
+                Response.Write("<script>alert('User already Exists. Try again.')</script>");
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "AlertRegister", "alert('" +status+ "');",true);
+                status = rm.InsertData(branch, year, division, roll, gender, name, email, mobile, hashedPassword);
+                Response.Redirect("login.aspx");
             }
+            
         }
             
     }
